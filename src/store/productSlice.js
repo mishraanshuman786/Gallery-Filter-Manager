@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchProducts = createAsyncThunk("products/fetchProducts",
     async () => {
-        let response = await fetch("http://localhost:3000/api/get-products");
+        let response = await fetch("/api/get-products");
      response= await response.json();
     return response.resTree;  // Assuming that the data is under the resTree property
   }
